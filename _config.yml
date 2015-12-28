@@ -1,0 +1,8 @@
+name: darkart's projects
+description: list of my creations.
+defaults:
+    -
+        scope:
+            path: ""
+        values:
+            layout: "default"
