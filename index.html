@@ -1,6 +1,18 @@
 ---
+layout: page
 ---
 <main>
     <p>Here are some of my works.</p>
-    {{ site.github }}
+    <dl>
+        {% for repo in site.github.public_repositories %}
+        {% unless repo.fork %}
+        <dt>
+            <a href="{{repo.homepage}}" data-repo="{{repo.html_url}}"> {{repo.name}} </a>
+        </dt>
+        <dd>
+            {{repo.description}}
+        </dd>
+        {% endunless %}
+        {% endfor %}
+    </dl>
 </main>
